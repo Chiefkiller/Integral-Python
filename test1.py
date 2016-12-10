@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 import sys
 
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtGui
 from test1gui import Ui_Form
 
-class MyForm(QtGui.QMainWindow):
 
+class MyForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QWidget.__init__(self, parent)
         self.ui = Ui_Form()
@@ -13,10 +14,11 @@ class MyForm(QtGui.QMainWindow):
         self.ui.pushButton.clicked.connect(self.helloworld)
 
     def helloworld(self):
-        self.ui.textEdit.setText(“Hey”)
-        print (‘Hello world again’)
+        self.ui.textEdit.setText("Hey")
+        print ("Hello world again")
 
-if __name__ == “__main__”:
+
+if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     myapp = MyForm()
     myapp.show()
